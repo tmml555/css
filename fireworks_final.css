@@ -1,0 +1,19 @@
+.fireworks-container-left {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background: transparent; /* 浅灰色背景 */
+    z-index: 0;
+}
+
+.fireworks-container-right {
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 25%;
+    height: 100%;
+    background: transparent; /* 浅灰色背景 */
+    z-index: 0;
+}
