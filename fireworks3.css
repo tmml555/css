@@ -1,0 +1,73 @@
+/* 烟花容器 */
+.fireworks-container {
+    position: fixed; /* 固定定位 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* 防止遮挡点击事件 */
+    z-index: 9999; /* 确保烟花在最上层 */
+}
+
+/* 烟花粒子 */
+.firework {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    border-radius: 50%;
+    animation: explode 1.5s ease-out infinite;
+}
+
+/* 烟花爆炸效果 */
+@keyframes explode {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
+}
+
+/* 烟花粒子的颜色和位置 */
+.firework:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+    background-color: #ff0; /* 黄色 */
+    box-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0;
+}
+
+.firework:nth-child(2) {
+    top: 40%;
+    left: 50%;
+    animation-delay: 0.5s;
+    background-color: #f00; /* 红色 */
+    box-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00;
+}
+
+.firework:nth-child(3) {
+    top: 60%;
+    left: 80%;
+    animation-delay: 1s;
+    background-color: #0f0; /* 绿色 */
+    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
+}
+
+.firework:nth-child(4) {
+    top: 10%;
+    left: 70%;
+    animation-delay: 1.5s;
+    background-color: #00f; /* 蓝色 */
+    box-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
+}
+
+.firework:nth-child(5) {
+    top: 80%;
+    left: 30%;
+    animation-delay: 2s;
+    background-color: #f0f; /* 紫色 */
+    box-shadow: 0 0 10px #f0f, 0 0 20px #f0f, 0 0 30px #f0f;
+}
