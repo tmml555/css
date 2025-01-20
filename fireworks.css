@@ -1,0 +1,67 @@
+/* 设置页面背景为黑色 */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+/* 烟花的基本样式 */
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ff0;
+    border-radius: 50%;
+    animation: explode 1s ease-out infinite;
+}
+
+/* 烟花爆炸的动画 */
+@keyframes explode {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(10);
+        opacity: 0;
+    }
+}
+
+/* 为每个烟花设置不同的位置和延迟 */
+.firework:nth-child(1) {
+    top: 20%;
+    left: 20%;
+    animation-delay: 0s;
+    background-color: #ff0; /* 黄色 */
+}
+
+.firework:nth-child(2) {
+    top: 40%;
+    left: 50%;
+    animation-delay: 0.5s;
+    background-color: #f00; /* 红色 */
+}
+
+.firework:nth-child(3) {
+    top: 60%;
+    left: 80%;
+    animation-delay: 1s;
+    background-color: #0f0; /* 绿色 */
+}
+
+.firework:nth-child(4) {
+    top: 10%;
+    left: 70%;
+    animation-delay: 1.5s;
+    background-color: #00f; /* 蓝色 */
+}
+
+.firework:nth-child(5) {
+    top: 80%;
+    left: 30%;
+    animation-delay: 2s;
+    background-color: #f0f; /* 紫色 */
+}
