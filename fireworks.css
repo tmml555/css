@@ -1,41 +1,40 @@
-/* 设置页面背景为黑色 */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #000;
-    overflow: hidden;
-    height: 100vh;
+/* 烟花容器 */
+.fireworks-container {
     position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
 
-/* 烟花的基本样式 */
+/* 烟花粒子 */
 .firework {
     position: absolute;
-    width: 10px;
-    height: 10px;
-    background-color: #ff0;
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
     border-radius: 50%;
-    animation: explode 1s ease-out infinite;
+    animation: explode 1.5s ease-out infinite;
 }
 
-/* 烟花爆炸的动画 */
+/* 烟花爆炸效果 */
 @keyframes explode {
     0% {
-        transform: scale(1);
+        transform: translate(-50%, -50%) scale(1);
         opacity: 1;
     }
     100% {
-        transform: scale(10);
+        transform: translate(-50%, -50%) scale(10);
         opacity: 0;
     }
 }
 
-/* 为每个烟花设置不同的位置和延迟 */
+/* 烟花粒子的颜色和位置 */
 .firework:nth-child(1) {
     top: 20%;
     left: 20%;
     animation-delay: 0s;
     background-color: #ff0; /* 黄色 */
+    box-shadow: 0 0 10px #ff0, 0 0 20px #ff0, 0 0 30px #ff0;
 }
 
 .firework:nth-child(2) {
@@ -43,6 +42,7 @@ body {
     left: 50%;
     animation-delay: 0.5s;
     background-color: #f00; /* 红色 */
+    box-shadow: 0 0 10px #f00, 0 0 20px #f00, 0 0 30px #f00;
 }
 
 .firework:nth-child(3) {
@@ -50,6 +50,7 @@ body {
     left: 80%;
     animation-delay: 1s;
     background-color: #0f0; /* 绿色 */
+    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 30px #0f0;
 }
 
 .firework:nth-child(4) {
@@ -57,6 +58,7 @@ body {
     left: 70%;
     animation-delay: 1.5s;
     background-color: #00f; /* 蓝色 */
+    box-shadow: 0 0 10px #00f, 0 0 20px #00f, 0 0 30px #00f;
 }
 
 .firework:nth-child(5) {
@@ -64,4 +66,5 @@ body {
     left: 30%;
     animation-delay: 2s;
     background-color: #f0f; /* 紫色 */
+    box-shadow: 0 0 10px #f0f, 0 0 20px #f0f, 0 0 30px #f0f;
 }
