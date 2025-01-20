@@ -1,0 +1,72 @@
+/* 混沌摆容器 */
+.chaos-pendulum-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+/* 摆锤 */
+.pendulum {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    transform-origin: top center;
+    animation: swing 3s ease-in-out infinite;
+}
+
+/* 摆线 */
+.pendulum::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    width: 2px;
+    height: 100px;
+    background-color: #333;
+    transform: translateX(-50%);
+}
+
+/* 摆锤动画 */
+@keyframes swing {
+    0%, 100% {
+        transform: rotate(-30deg);
+    }
+    50% {
+        transform: rotate(30deg);
+    }
+}
+
+/* 多个摆锤 */
+.pendulum:nth-child(1) {
+    top: 50%;
+    left: 50%;
+    animation-delay: 0s;
+}
+
+.pendulum:nth-child(2) {
+    top: 50%;
+    left: 50%;
+    animation-delay: 0.5s;
+}
+
+.pendulum:nth-child(3) {
+    top: 50%;
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.pendulum:nth-child(4) {
+    top: 50%;
+    left: 50%;
+    animation-delay: 1.5s;
+}
+
+.pendulum:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    animation-delay: 2s;
+}
